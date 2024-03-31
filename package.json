@@ -1,8 +1,14 @@
 {
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.m?js$": "babel-jest"
+    }
+  },
   "name": "testing-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "testing-practice.js",
   "scripts": {
     "test": "jest"
   },
