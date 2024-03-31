@@ -2,8 +2,15 @@ function capitalize (string) {
     return string.slice(0,1).toUpperCase() + string.slice(1);
 }
 
-// let sfs = capitalize('haverts');
+function reverseString (string) {
+    return string.split('').reverse().join('');
+}
+
+// let sfs = reverseString('haverts');
 // console.log(sfs)
 
 
-export { capitalize }
+export { 
+    capitalize,
+    reverseString
+}
