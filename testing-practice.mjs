@@ -37,9 +37,31 @@ function caesarCipher(string, key) {
     return result;
 }
 
+function getArrayAverage(array) {
+    const sum = array.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue;
+    }, 0);
+    const average = Math.round(sum/array.length);
+
+    return average;
+}
+
+function analyzeArray(array) {
+    const sortedArray = array.sort();
+    const average = getArrayAverage(array)
+    return {
+        average: average,
+        min: sortedArray[0],
+        max: sortedArray[sortedArray.length-1],
+        length: sortedArray.length
+    };
+}
+
+
 export { 
     capitalize,
     reverseString,
     calculator,
-    caesarCipher
+    caesarCipher,
+    analyzeArray
 }

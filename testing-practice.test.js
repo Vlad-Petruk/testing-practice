@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator, caesarCipher } from "./testing-practice.mjs"
+import { capitalize, reverseString, calculator, caesarCipher, analyzeArray } from "./testing-practice.mjs"
 
 
 test('capitalize given string', ()=> {
@@ -58,5 +58,11 @@ describe('caesar cipher testing', ()=> {
 
     test('working with punctuation',()=> {
         expect(caesarCipher('ad,ad cd?', 1)).toBe('BE,BE DE?')
+    })
+})
+
+describe('analyze array tests', ()=> {
+    test('contains average propery', ()=> {
+        expect(analyzeArray([1,8,3,4,2,6])).toStrictEqual({ average: 4,  min: 1,  max: 8,  length: 6})
     })
 })
