@@ -6,11 +6,14 @@ function reverseString (string) {
     return string.split('').reverse().join('');
 }
 
-// let sfs = reverseString('haverts');
-// console.log(sfs)
-
+const calculator = {
+    multiply: function(num1, num2) {
+        return num1 * num2;
+    }
+}
 
 export { 
     capitalize,
-    reverseString
+    reverseString,
+    calculator
 }
