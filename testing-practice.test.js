@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator } from "./testing-practice.mjs"
+import { capitalize, reverseString, calculator, caesarCipher } from "./testing-practice.mjs"
 
 
 test('capitalize given string', ()=> {
@@ -40,5 +40,23 @@ describe('calculator object', ()=> {
 
     test('divades two numbers correctly', ()=> {
         expect(calculator.divade(4,2)).toBe(2)
+    })
+})
+
+describe('caesar cipher testing', ()=> {
+    test('caesar cipher with shift factor 3', () => {
+        expect(caesarCipher('Hello', 3)).toBe('KHOOR')
+    })
+
+    test('wraping from z to a', ()=> {
+        expect(caesarCipher('za', 1)).toBe('AB')
+    })
+
+    test('not staying the same', ()=> {
+        expect(caesarCipher('Hello', 4)).not.toBe('Hello')
+    })
+
+    test('working with punctuation',()=> {
+        expect(caesarCipher('ad,ad cd?', 1)).toBe('BE,BE DE?')
     })
 })

@@ -24,8 +24,22 @@ const calculator = {
     },
 }
 
+function caesarCipher(string, key) {
+    let result = '';
+    let stringUpper = string.toUpperCase();
+    for(let i = 0; i < stringUpper.length; i++) {
+            if(stringUpper[i].match(/[A-Z]/)){
+            let letterAscii = (stringUpper.charCodeAt([i])- 65 + key) %26 + 65;
+            let newLetter = String.fromCharCode(letterAscii);
+            result += newLetter;
+        } else result+=stringUpper[i];
+    }
+    return result;
+}
+
 export { 
     capitalize,
     reverseString,
-    calculator
+    calculator,
+    caesarCipher
 }
