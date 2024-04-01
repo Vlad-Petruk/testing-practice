@@ -9,7 +9,19 @@ function reverseString (string) {
 const calculator = {
     multiply: function(num1, num2) {
         return num1 * num2;
-    }
+    },
+
+    add: function(num1, num2) {
+        return num1 + num2;
+    },
+
+    substract: function(num1, num2) {
+        return num1 - num2;
+    },
+
+    divade: function(num1, num2) {
+        return num1 / num2;
+    },
 }
 
 export { 
